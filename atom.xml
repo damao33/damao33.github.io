@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://damao33.github.io</id>
     <title>damao_33</title>
-    <updated>2020-05-11T05:48:22.425Z</updated>
+    <updated>2020-05-11T05:49:47.046Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://damao33.github.io"/>
     <link rel="self" href="https://damao33.github.io/atom.xml"/>
@@ -60,6 +60,41 @@
 <li>用DAO模式对MySQL进行操作</li>
 <li>在客户端将信息在各个界面间传输</li>
 </ul>
+<hr>
+<h1 id="三自己的代码提交记录截图">三.自己的代码提交记录截图</h1>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002959991-237554488.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003015038-1477407246.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003016203-1706076234.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002918055-7983445.png" alt="" loading="lazy"></figure>
+<hr>
+<h1 id="四自己负责模块或任务详细说明">四.自己负责模块或任务详细说明</h1>
+<ul>
+<li>客户端登陆、注册、设置信息时和服务器的数据交互：</li>
+</ul>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003122458-173207921.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003134328-287150250.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003154568-1652655139.png" alt="" loading="lazy"></p>
+<p>通过DAO模式将在界面获得的信息与服务器数据库上的信息进行交互，以实现用户登陆、注册、编辑信息的功能。</p>
+<ul>
+<li>获取游戏操作信息，将玩家的游戏操作传到游戏界面以便于GUI显示：</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003315061-905209868.png" alt="" loading="lazy"></figure>
+<p>客户端将点击在哪个方块的信息发送到服务器，服务器将该消息发给所有连接的用户，所有用户收到该消息后在游戏界面对应位置显示出该玩家目前游戏进度。</p>
+<ul>
+<li>客户端接收到消息时将消息传到相应界面以便于GUI的实时显示：</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003331635-1150829104.png" alt="" loading="lazy"></figure>
+<p>用户每次操作（登陆、进入游戏房间、进行游戏操作、退出等）都会通过服务器发送给所有已连接用户，用户客户端通过判断该操作信息的类型，将该信息传递给对应的GUI面板以便实时显示信息。</p>
+<hr>
+<p>##主要代码</p>
+<ul>
+<li>服务器接收并转发信息</li>
+</ul>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000802575-1919729382.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000848061-266985498.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001641969-1208466272.png" alt="" loading="lazy"></p>
+<p>服务器端用ServerSocket监听端口，当有用户通过Socket连接时启动一个新的线程来处理该用户发送过来的消息。</p>
+<p>**服务器如何获</p>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
 <p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
@@ -69,7 +104,7 @@
 <li>用DAO模式对MySQL进行操作</li>
 <li>在客户端将信息在各个界面间传输</li>
 </ul>
-<h2 id="-more-"><!-- more --></h2>
+<hr>
 <h1 id="三自己的代码提交记录截图">三.自己的代码提交记录截图</h1>
 <p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002959991-237554488.png" alt="" loading="lazy"><br>
 <img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003015038-1477407246.png" alt="" loading="lazy"><br>
