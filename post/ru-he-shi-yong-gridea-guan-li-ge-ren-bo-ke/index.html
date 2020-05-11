@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Hello Gridea | damao_33</title>
+<title>如何使用Gridea管理个人博客 | damao_33</title>
 <link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589170778933">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://damao33.github.io/styles/main.css">
@@ -87,45 +87,55 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    Hello Gridea
+                    如何使用Gridea管理个人博客
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2018-12-12 ·
+                        · 2020-05-11 ·
                     </time>
-                    
-                        <a href="https://damao33.github.io/tag/oNKZZuiKA/" class="post-tags">
-                            # Gridea
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                    <p>在公众号topbook被安利了Gridea这个写博客的软件后，想起自己又好久没有写博客，于是顺便趁着上手Gridea的机会，好好整顿一下博客</p>
+<h2 id="建立github仓库">建立github仓库</h2>
+<p>首先到github上创建一个新的仓库，仓库名为 「用户名.github.io」，后续就可以用这个仓库名作为<strong>博客访问域名</strong></p>
+<figure data-type="image" tabindex="1"><img src="F:%5Cblogs%5Cimg%5C%E9%83%A8%E7%BD%B2Gridea%5C%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt="建仓库" loading="lazy"></figure>
+<p>创建仓库后点击仓库的settings，拉到页面最下端检查自己是否开启了github pages</p>
+<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511115631905.png" alt="image-20200511115631905" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="F:%5Cblogs%5Cimg%5C%E9%83%A8%E7%BD%B2Gridea%5CGithubPages.png" alt="GithubPages" loading="lazy"></figure>
+<p>到这里，就成功建立了内容为空的博客页面，访问域名是你的仓库名</p>
+<h2 id="建立github-token">建立github token</h2>
+<p>点击右上角头像的settings，选择菜单最下面的developer settings</p>
+<figure data-type="image" tabindex="4"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511115846694.png" alt="image-20200511115846694" loading="lazy"></figure>
+<p>选择personal access tokens，并生成一个新的token</p>
+<figure data-type="image" tabindex="5"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120405348.png" alt="image-20200511120405348" loading="lazy"></figure>
+<p>新建token时填完名称后把repo勾选起来，然后到页面最下面点击生成</p>
+<figure data-type="image" tabindex="6"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120525068.png" alt="image-20200511120525068" loading="lazy"></figure>
+<p>生成成功后，这个页面一定不能关闭，根据提示，你的这个令牌关掉页面后你再也找不到了</p>
+<figure data-type="image" tabindex="7"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120702611.png" alt="image-20200511120702611" loading="lazy"></figure>
+<h2 id="配置gridea">配置Gridea</h2>
+<p>在远程选项里，把能填的信息都填上去，令牌就是你上面生成token获得的个人令牌</p>
+<figure data-type="image" tabindex="8"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120830318.png" alt="image-20200511120830318" loading="lazy"></figure>
+<p>保存后，点击左下角的同步，再通过域名打开你的博客，或者直接点击左下角小地球，就能看到你通过Gridea部署的博客啦</p>
+<figure data-type="image" tabindex="9"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511121005769.png" alt="image-20200511121005769" loading="lazy"></figure>
+<h2 id="使用gridea">使用Gridea</h2>
+<p>关于Gridea的使用还是比较“傻瓜式”的，你可以在清晰简洁的界面里放上你想放的东西，然后点击同步，就可以在博客中看到啦。</p>
+<p>Gridea有开放的主题配置环境，你可以在主题商城中选择用户开发或者开发者开发的主题</p>
+<p>值得一提的是，Gridea 是一个静态博客写作客户端，所以每次写完内容不要忘记点击同步。</p>
+<h2 id="官网">官网</h2>
+<p>https://gridea.dev/</p>
 
                 </div>
             </article>
         </div>
 
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://damao33.github.io/post/java_mine_sweeper/" class="post-title gt-a-link">
+                    JAVA面向对象编程课程设计——多人扫雷对战
+                </a>
+            </div>
         
 
         
