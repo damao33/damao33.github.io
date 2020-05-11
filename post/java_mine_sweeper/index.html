@@ -1,66 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://damao33.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-05-11T02:36:20.269Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://damao33.github.io"/>
-    <link rel="self" href="https://damao33.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://damao33.github.io/images/avatar.png</logo>
-    <icon>https://damao33.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[JAVA面向对象编程课程设计——多人扫雷对战]]></title>
-        <id>https://damao33.github.io/post/java_mine_sweeper/</id>
-        <link href="https://damao33.github.io/post/java_mine_sweeper/">
-        </link>
-        <updated>2020-05-11T02:29:06.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
-<p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
-<h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
-<ul>
-<li>负责服务器和客户端信息传输</li>
-<li>用DAO模式对MySQL进行操作</li>
-<li>在客户端将信息在各个界面间传输</li>
-</ul>
-<hr>
-<h1 id="三自己的代码提交记录截图">三.自己的代码提交记录截图</h1>
-<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002959991-237554488.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003015038-1477407246.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003016203-1706076234.png" alt="" loading="lazy"></p>
-<figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002918055-7983445.png" alt="" loading="lazy"></figure>
-<hr>
-<h1 id="四自己负责模块或任务详细说明">四.自己负责模块或任务详细说明</h1>
-<ul>
-<li>客户端登陆、注册、设置信息时和服务器的数据交互：</li>
-</ul>
-<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003122458-173207921.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003134328-287150250.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003154568-1652655139.png" alt="" loading="lazy"></p>
-<p>通过DAO模式将在界面获得的信息与服务器数据库上的信息进行交互，以实现用户登陆、注册、编辑信息的功能。</p>
-<ul>
-<li>获取游戏操作信息，将玩家的游戏操作传到游戏界面以便于GUI显示：</li>
-</ul>
-<figure data-type="image" tabindex="2"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003315061-905209868.png" alt="" loading="lazy"></figure>
-<p>客户端将点击在哪个方块的信息发送到服务器，服务器将该消息发给所有连接的用户，所有用户收到该消息后在游戏界面对应位置显示出该玩家目前游戏进度。</p>
-<ul>
-<li>客户端接收到消息时将消息传到相应界面以便于GUI的实时显示：</li>
-</ul>
-<figure data-type="image" tabindex="3"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003331635-1150829104.png" alt="" loading="lazy"></figure>
-<p>用户每次操作（登陆、进入游戏房间、进行游戏操作、退出等）都会通过服务器发送给所有已连接用户，用户客户端通过判断该操作信息的类型，将该信息传递给对应的GUI面板以便实时显示信息。</p>
-<hr>
-<p>##主要代码</p>
-<ul>
-<li>服务器接收并转发信息</li>
-</ul>
-<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000802575-1919729382.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000848061-266985498.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001641969-1208466272.png" alt="" loading="lazy"></p>
-<p>服务器端用ServerSocket监听端口，当有用户通过Socket连接时启动一个新的线程来处理该用户发送过来的消息。</p>
-<p>**服务器如何获</p>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JAVA面向对象编程课程设计——多人扫雷对战 | Gridea</title>
+<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589164576139">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://damao33.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="JAVA面向对象编程课程设计——多人扫雷对战 | Gridea - Atom Feed" href="https://damao33.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="一.团队课程设计博客链接
+JAVA面向对象编程课程设计——多人扫雷对战
+二.个人负责模块和任务说明
+
+负责服务器和客户端信息传输
+用DAO模式对MySQL进行操作
+在客户端将信息在各个界面间传输
+
+
+三.自己的代码提交记录截图
+
+
+
+
+
+四..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://damao33.github.io">
+  <img class="avatar" src="https://damao33.github.io/images/avatar.png?v=1589164576139" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              JAVA面向对象编程课程设计——多人扫雷对战
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-05-11
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
 <p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
 <h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
 <ul>
@@ -159,38 +202,84 @@
 <p>实际效果：<br>
 <img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014000700-1057066298.png" alt="" loading="lazy"></p>
 <!-- more -->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://damao33.github.io/post/hello-gridea/</id>
-        <link href="https://damao33.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%80%E5%9B%A2%E9%98%9F%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E9%93%BE%E6%8E%A5">一.团队课程设计博客链接</a></li>
+<li><a href="#%E4%BA%8C%E4%B8%AA%E4%BA%BA%E8%B4%9F%E8%B4%A3%E6%A8%A1%E5%9D%97%E5%92%8C%E4%BB%BB%E5%8A%A1%E8%AF%B4%E6%98%8E">二.个人负责模块和任务说明</a></li>
+<li><a href="#%E4%B8%89%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95%E6%88%AA%E5%9B%BE">三.自己的代码提交记录截图</a></li>
+<li><a href="#%E5%9B%9B%E8%87%AA%E5%B7%B1%E8%B4%9F%E8%B4%A3%E6%A8%A1%E5%9D%97%E6%88%96%E4%BB%BB%E5%8A%A1%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E">四.自己负责模块或任务详细说明</a></li>
+<li><a href="#%E4%BA%94%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%84%9F%E6%83%B3">五.课程设计感想</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://damao33.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://damao33.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

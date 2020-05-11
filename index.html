@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gridea</title>
-<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589164239233">
+<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589164576139">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://damao33.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://damao33.github.io/atom.xml">
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://damao33.github.io">
-  <img class="avatar" src="https://damao33.github.io/images/avatar.png?v=1589164239233" alt="">
+  <img class="avatar" src="https://damao33.github.io/images/avatar.png?v=1589164576139" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -72,7 +72,7 @@
         <div class="post-container">
   
     <article class="post">
-      <a href="https://damao33.github.io/post/java-mian-xiang-dui-xiang-bian-cheng-ke-cheng-she-ji-duo-ren-sao-lei-dui-zhan/">
+      <a href="https://damao33.github.io/post/java_mine_sweeper/">
         <h2 class="post-title">JAVA面向对象编程课程设计——多人扫雷对战</h2>
       </a>
       <div class="post-info">
@@ -86,22 +86,22 @@
       </div>
       
       <div class="post-abstract">
-        <p>#一.团队课程设计博客链接</p>
+        <h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
 <p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
-<p>#二.个人负责模块和任务说明</p>
+<h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
 <ul>
 <li>负责服务器和客户端信息传输</li>
 <li>用DAO模式对MySQL进行操作</li>
 <li>在客户端将信息在各个界面间传输</li>
 </ul>
 <hr>
-<p>#三.自己的代码提交记录截图</p>
+<h1 id="三自己的代码提交记录截图">三.自己的代码提交记录截图</h1>
 <p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002959991-237554488.png" alt="" loading="lazy"><br>
 <img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003015038-1477407246.png" alt="" loading="lazy"><br>
 <img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003016203-1706076234.png" alt="" loading="lazy"></p>
 <figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002918055-7983445.png" alt="" loading="lazy"></figure>
 <hr>
-<p>#四.自己负责模块或任务详细说明</p>
+<h1 id="四自己负责模块或任务详细说明">四.自己负责模块或任务详细说明</h1>
 <ul>
 <li>客户端登陆、注册、设置信息时和服务器的数据交互：</li>
 </ul>
@@ -128,59 +128,7 @@
 <img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000848061-266985498.png" alt="" loading="lazy"><br>
 <img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001641969-1208466272.png" alt="" loading="lazy"></p>
 <p>服务器端用ServerSocket监听端口，当有用户通过Socket连接时启动一个新的线程来处理该用户发送过来的消息。</p>
-<p><strong>服务器如何获得所有已连接用户？</strong></p>
-<p>服务器有一个HashSet型静态属性来存放每个连接进来的线程，而线程有getUser()，通过遍历这个Set就能实现把消息发给所有用户的方法（sendToAll）。</p>
-<ul>
-<li>客户端接收并向界面传送信息</li>
-</ul>
-<figure data-type="image" tabindex="4"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000948763-224901141.png" alt="" loading="lazy"></figure>
-<ul>
-<li>数据库DAO模式实现类</li>
-</ul>
-<figure data-type="image" tabindex="5"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001305648-270026570.png" alt="" loading="lazy"></figure>
-<p>这里的方法都是对数据库的基本操作，登陆、注册、退出方法无非是加了点判断条件，故不展示。</p>
-<ul>
-<li>客户端连接到服务器</li>
-</ul>
-<figure data-type="image" tabindex="6"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001349260-1475308261.png" alt="" loading="lazy"></figure>
-<p>参考郑老师提供的JDBCUtil写的客户端连接服务器数据库、用Socket与服务端建立连接，都是基本语句，故不展示。</p>
-<p><strong>与服务器进行连接要注意？</strong></p>
-<ol>
-<li>与MySql连接，要注意MySQLjar包的版本，并根据jar包版本来写URL，如果URL与版本不符合可以根据异常信息去百度处理方法。</li>
-<li>用Socket与服务器连接，要注意我们校园网的ip都是内网，所以用某个同学的电脑开着做服务器是不现实的（如果会内网穿透可能可以实现），所以我们在腾讯云上租了一个月的学生服务器，服务器有外网ip，连接起来更简单。【配置服务器环境时需要注意检查安全组是否打开对应端口】</li>
-</ol>
-<ul>
-<li>多个元素封装成一条信息的办法：</li>
-</ul>
-<figure data-type="image" tabindex="7"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001558900-1648033274.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="8"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001523803-530708351.png" alt="" loading="lazy"></figure>
-<p>信息Msg都是用Object类型，在考虑如何将多个信息元素一起发送时，一下子就想到“万物皆Object”这句话，利用Object数组也是一个Object可以将多个元素封装成一条信息，这是本次编程过程中让自己惊喜的一个点。</p>
-<hr>
-<p>#五.课程设计感想</p>
-<ul>
-<li>关于对象流的使用</li>
-</ul>
-<p>对象流的使用是本次课设困扰我接近24小时的问题。过程中百度了无数办法，碰上了一个又一个异常，最后在郑老师帮助下解决，以下是一点心得，理解可能不到位，希望有人指出。</p>
-<ol>
-<li>对象流传输的类要序列化（implements Serializable），而且这个类服务器和客户端之间要传输，所以两边的这个类要是一模一样的，否则反序列化时会抛异常，这个最好解决。</li>
-<li>在建立对象流时，要谨慎。比如说服务器要先建立输出流再建立输入流，客户端就要先建立输入流再建立输出流。在建立对象流时，不要在最前面建了一个对象流，后面用这个对象流处理传进来的每个对象，这样对象流在第一次反序列化时没有毛病，但是在遇到第二个传进来的对象时，序列化就会出现异常。所以我的解决办法是当要用的时候再去建立一个对象流。</li>
-<li>服务器在使用对象流时，要用while循环把ServerSocket的accept包括起来。见博客：https://blog.csdn.net/do_script/article/details/50059049</li>
-</ol>
-<ul>
-<li>关于服务器与客户端数据交互</li>
-</ul>
-<p>既然可以将多个元素封装成一条信息，也就可以从一条信息读取出多个元素，当然要记得使用instanceof来判断信息类型。服务器与客户端之间收发信息其实不难，而且方法类似，难的是一方在收到信息后要对这条信息做怎样的处理，才能让它传到你想传的地方。</p>
-<ul>
-<li>关于整个游戏的设计思路</li>
-</ul>
-<ol>
-<li>这次扫雷的最终成果是客户端可以进行扫雷，但是不能看到其他玩家的游戏画面，只能看到他们展开了多少方格，这样多少有点弱化了“对战”，但是时间有限，没有成功将其他人的画面显示出来。<br>
-2.原本的思路其实是在其他玩家的面板也放上一个小的扫雷面板，然后在客户端点击一个方格后把这个操作信息发给所有用户，其他用户把收到的这个操作信息作用在该信息对应的扫雷面板上，这样就能让客户端看到其他玩家的操作画面。但是由于我们没能把扫雷面板放在对应的玩家面板上，所以这个想法可以说还没开始就失败了。</li>
-</ol>
-<p>理想效果（P图实现）：<br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014117406-81142455.png" alt="" loading="lazy"></p>
-<p>实际效果：<br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014000700-1057066298.png" alt="" loading="lazy"></p>
+<p>**服务器如何获</p>
 
       </div>
     </article>
