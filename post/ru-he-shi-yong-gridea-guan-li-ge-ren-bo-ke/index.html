@@ -3,8 +3,8 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>如何使用Gridea管理个人博客 | damao_33</title>
-<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589170778933">
+<title>如何使用Gridea管理个人博客--简易版 | damao_33</title>
+<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589175532086">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://damao33.github.io/styles/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -87,7 +87,7 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    如何使用Gridea管理个人博客
+                    如何使用Gridea管理个人博客--简易版
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
@@ -99,31 +99,31 @@
                     <p>在公众号topbook被安利了Gridea这个写博客的软件后，想起自己又好久没有写博客，于是顺便趁着上手Gridea的机会，好好整顿一下博客</p>
 <h2 id="建立github仓库">建立github仓库</h2>
 <p>首先到github上创建一个新的仓库，仓库名为 「用户名.github.io」，后续就可以用这个仓库名作为<strong>博客访问域名</strong></p>
-<figure data-type="image" tabindex="1"><img src="F:%5Cblogs%5Cimg%5C%E9%83%A8%E7%BD%B2Gridea%5C%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt="建仓库" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133416265-1974237194.png" alt="" loading="lazy"></figure>
 <p>创建仓库后点击仓库的settings，拉到页面最下端检查自己是否开启了github pages</p>
-<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511115631905.png" alt="image-20200511115631905" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="F:%5Cblogs%5Cimg%5C%E9%83%A8%E7%BD%B2Gridea%5CGithubPages.png" alt="GithubPages" loading="lazy"></figure>
+<p><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133537524-1830869770.png" alt="" loading="lazy"><br>
+<img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133600001-1804370455.png" alt="" loading="lazy"></p>
 <p>到这里，就成功建立了内容为空的博客页面，访问域名是你的仓库名</p>
 <h2 id="建立github-token">建立github token</h2>
 <p>点击右上角头像的settings，选择菜单最下面的developer settings</p>
-<figure data-type="image" tabindex="4"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511115846694.png" alt="image-20200511115846694" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133620432-1166258344.png" alt="" loading="lazy"></figure>
 <p>选择personal access tokens，并生成一个新的token</p>
-<figure data-type="image" tabindex="5"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120405348.png" alt="image-20200511120405348" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133634799-1325132850.png" alt="" loading="lazy"></figure>
 <p>新建token时填完名称后把repo勾选起来，然后到页面最下面点击生成</p>
-<figure data-type="image" tabindex="6"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120525068.png" alt="image-20200511120525068" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133642980-772495378.png" alt="" loading="lazy"></figure>
 <p>生成成功后，这个页面一定不能关闭，根据提示，你的这个令牌关掉页面后你再也找不到了</p>
-<figure data-type="image" tabindex="7"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120702611.png" alt="image-20200511120702611" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133651950-1371172610.png" alt="" loading="lazy"></figure>
 <h2 id="配置gridea">配置Gridea</h2>
 <p>在远程选项里，把能填的信息都填上去，令牌就是你上面生成token获得的个人令牌</p>
-<figure data-type="image" tabindex="8"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511120830318.png" alt="image-20200511120830318" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133659290-333083240.png" alt="" loading="lazy"></figure>
 <p>保存后，点击左下角的同步，再通过域名打开你的博客，或者直接点击左下角小地球，就能看到你通过Gridea部署的博客啦</p>
-<figure data-type="image" tabindex="9"><img src="C:%5CUsers%5Cwe%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200511121005769.png" alt="image-20200511121005769" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133705466-1843821433.png" alt="" loading="lazy"></figure>
 <h2 id="使用gridea">使用Gridea</h2>
 <p>关于Gridea的使用还是比较“傻瓜式”的，你可以在清晰简洁的界面里放上你想放的东西，然后点击同步，就可以在博客中看到啦。</p>
 <p>Gridea有开放的主题配置环境，你可以在主题商城中选择用户开发或者开发者开发的主题</p>
 <p>值得一提的是，Gridea 是一个静态博客写作客户端，所以每次写完内容不要忘记点击同步。</p>
 <h2 id="官网">官网</h2>
-<p>https://gridea.dev/</p>
+<p><a href="https://gridea.dev/">https://gridea.dev/</a></p>
 
                 </div>
             </article>
