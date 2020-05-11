@@ -1,0 +1,368 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>第1次任务-面向对象设计（购物车） | damao_33</title>
+<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589176094949">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://damao33.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            damao_33
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    第1次任务-面向对象设计（购物车）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2019-09-20 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="第1次任务-面向对象设计购物车">第1次任务-面向对象设计（购物车）</h1>
+<h3 id="小组分工">小组分工：</h3>
+<ul>
+<li>编码规范：叶鸿章</li>
+<li>前期调查与功能设计：吴潮汇</li>
+<li>面向对象设计与UML制作：张赓</li>
+<li>PPT制作、演示：陈伟杰</li>
+</ul>
+<h3 id="注建议ctrl鼠标滚轮向上以让图片放大看得更清楚">注：建议ctrl+鼠标滚轮向上，以让图片放大看得更清楚</h3>
+<hr>
+<h2 id="1前期调查">1.前期调查</h2>
+<figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920120649790-774635289.png" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="2系统功能结构图">2.系统功能结构图</h2>
+<figure data-type="image" tabindex="2"><img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920120739398-2133649611.jpg" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="3系统描述">3.系统描述</h2>
+<figure data-type="image" tabindex="3"><img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920200224965-82720490.png" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="4uml类图">4.UML类图</h2>
+<figure data-type="image" tabindex="4"><img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920232338850-583276332.png" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="5面向对象的封装性">5.面向对象的封装性</h2>
+<h4 id="体现封装性的几个点">体现封装性的几个点：</h4>
+<ol>
+<li>
+<p>商品类中的属性都设为private，外部无法直接访问到它的属性，只能通过getters来访问<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920233754014-1452485426.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>购物车类里的查找函数findByid设为private，因为该查找函数返回的结果只服务于此类里的 增加/移除 等操作，外部没有必要访问到该函数返回值<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920233802142-407098889.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>购物车类里的移除方法removeFromMyCart返回的是boolean值，移除成功或失败都不会直接在方法里打印出类似“移除成功”“移除失败”的效果，而是返回true或false的值给外部<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920233810384-469521759.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>订单类里的评分/评论方法若直接写在商品类中，可以省去一定代码量，更加容易实现，但不符合逻辑，因为不是“商品给XX评分评论”，而是“用户通过订单对商品评分评价”<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920233819208-1710953.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<hr>
+<h2 id="6项目包结构与主要功能流程图">6.项目包结构与主要功能流程图</h2>
+<p>项目包结构：<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920121057734-306054744.png" alt="" loading="lazy"></p>
+<p>主要功能流程图：<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190920121845683-737647914.png" alt="" loading="lazy"></p>
+<hr>
+<h2 id="7关键代码">7.关键代码</h2>
+<h4 id="购物车类shoppingcart只展示方法">购物车类ShoppingCart（只展示方法）</h4>
+<pre><code>public class ShoppingCart {
+	
+	public void addToMyCart(Commidity commidity) { // 添加商品至购物车
+		ItemEntry tem = new ItemEntry(commidity);
+		int index = this.findById(commidity.getId());
+		if (index == -1) { // 若购物车不存在该商品，则直接增加一条ItemEntry
+			this.EntryList.add(tem);	
+		} else {// 若购物车存在该商品，直接在对应ItemEntry中数量+1
+			this.EntryList.get(index).increase();
+		}
+	}
+	public boolean removeFromMyCart(int id) { // 从购物车中移除商品
+		int index = this.findById(id);
+		if (index == -1) { // 若购物车不存在该商品，返回false
+			return false;
+		} else { // 若购物车存在该商品
+			if (this.EntryList.get(index).getNum()&gt;1) {
+				this.EntryList.get(index).decrease();// 该商品选中数量&gt;1，则对应ItemEntry数量-1
+			} else {
+				this.EntryList.remove(index);// 该商品选中数量=1，则直接移除对应ItemEntry
+			}
+			return true;
+		}
+	}
+	/*public void showMyCart() { // 展示购物车
+		for(ItemEntry now:EntryList) {
+			System.out.println(now.toString());
+		}
+	}*/
+        public ArrayList&lt;ItemEntry&gt; showMyCart() { // 展示购物车
+		return this.EntryList;
+	}
+	public double countTotalPrice() { //计算购物车中所有商品的总价
+		for(ItemEntry now:EntryList) {
+			totalPrice += now.getPrice();
+		}
+		return this.totalPrice;
+	}
+	public void generateOrder(int index) { //生成一条相应订单给user
+		ItemEntry tem = this.EntryList.get(index);
+		Order order = new Order(tem);
+		user.getOrderList().add(order);
+		this.totalPrice -= tem.getPrice();//购物车总价减去该订单价格
+		this.EntryList.remove(index);//购物车中移除该商品条目
+	}
+	private int findById(int id) { // 若购物车存在此商品，返回下标；若不存在，返回-1
+		int index = -1;
+		if ( this.EntryList.size()&gt;0) {
+			for(int i = 0; i&lt;this.EntryList.size();i++) {
+				if ( this.EntryList.get(i).getItem().getId() == id) {
+					index = i;
+					break;
+				}
+			}
+		}
+		return index;
+	}
+}
+</code></pre>
+<h4 id="商品条目类itementry省略settergetter">商品条目类ItemEntry(省略setter/getter)</h4>
+<pre><code>public class ItemEntry {// 所选商品的信息
+	private Commidity commidity;//商品类，存该商品基本信息
+	private double price;//该商品选中数量的总价
+	private int num;//该商品选中数量
+	public ItemEntry(Commidity commidity){
+		this.price = commidity.getPrice();
+	}
+	public void increase() { // 该条目数量+1
+		num++;
+		this.price += this.price;//该条目总价改变
+	}
+	public void decrease() { // 该条目数量-1
+		num--;
+		this.price -= this.price;//该条目总价改变
+	}
+
+}
+</code></pre>
+<hr>
+<h2 id="类功能一览">类功能一览：</h2>
+<ul>
+<li>
+<p>Mall</p>
+<ul>
+<li>存放所有商品</li>
+<li>展示所有商品</li>
+<li>移除指定商品</li>
+<li>通过id查找商品，查找成功返回下标，否则返回-1</li>
+</ul>
+</li>
+<li>
+<p>Commidity</p>
+<ul>
+<li>初始化商品id编号</li>
+<li>存放商品id,库存，单价，买家评分，买家评论</li>
+</ul>
+</li>
+<li>
+<p>ItemEntry</p>
+<ul>
+<li>存放指定商品所选中的数量及选中的数量总价</li>
+<li>增加/减少 指定商品选中的数量（1个）</li>
+</ul>
+</li>
+<li>
+<p>ShoppingCart</p>
+<ul>
+<li>存放购物车中商品总价，所选中的商品条目，以及使用该购物车的用户</li>
+<li>添加商品至购物车，若该商品不在购物车则新增加一条商品条目，若存在则数量+1</li>
+<li>移除商品，若商品不存在则返回false，若存在且数量&gt;1则数量-1，若存在且数量=1则删除该商品条目，并返回true</li>
+<li>展示购物车中所有商品</li>
+<li>算出购物车中商品总价</li>
+<li>生成一条相应订单给用户</li>
+<li>通过id在购物车内查找商品，查找成功返回下标，否则返回-1</li>
+</ul>
+</li>
+<li>
+<p>User</p>
+<ul>
+<li>存放用户地址和订单</li>
+<li>增加/删除 地址</li>
+<li>展示所有订单</li>
+<li>删除某条订单</li>
+</ul>
+</li>
+<li>
+<p>Order</p>
+<ul>
+<li>存放商品条目和订单号</li>
+<li>自动生成该条订单的订单号</li>
+</ul>
+</li>
+<li>
+<p>Address</p>
+<ul>
+<li>存放地址的省，市，镇</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="问题补充">问题补充：</h2>
+<h4 id="1addtomycart-返回值用void是否合适">1.addToMyCart 返回值用void是否合适？</h4>
+<pre><code>public void addToMyCart(Commidity commidity) { // 添加商品至购物车
+		ItemEntry tem = new ItemEntry(commidity);
+		int index = this.findByid(commidity.getId());
+		if (index == -1) { // 若购物车不存在该商品，则直接增加一条ItemEntry
+			this.EntryList.add(tem);	
+		} else {// 若购物车存在该商品，直接在对应ItemEntry中数量+1
+			this.EntryList.get(index).increase();
+		}
+	}
+</code></pre>
+<ul>
+<li>addToMyCart（commidity）返回值是void而不是boolean，我们的想法是因为传入的参数commidity就是一个商城中有的商品，所以一定能添加成功，不用判断添加成功或失败而返回true或false，只要判断购物车中是否含有这个商品，如果有就向相应的ItemEntry数量+1，无则向购物车中新增一条新的ItemEntry。一开始有想法让返回值是int，若购物车有此商品返回1，若无返回2，但后来考虑到在前端调用该增加方法时，不论返回1或2，对于用户的结果都是“添加成功”，便还是让返回值是void</li>
+</ul>
+<h4 id="2showmycart耦合到控制台看看如何解耦">2.showMyCart耦合到控制台，看看如何解耦？</h4>
+<pre><code>        /*public void showMyCart() { // 未更改版本的展示购物车
+		for(ItemEntry now:EntryList) {
+			System.out.println(now.toString());
+		}
+	}*/
+        public ArrayList&lt;ItemEntry&gt; showMyCart() { // 更改后的展示购物车
+		return this.EntryList;
+	}
+</code></pre>
+<ul>
+<li>耦合我个人的理解是函数之间有相互的联系，解耦就是去弱化这种关系，把方法写得独立点，以免要改一个方法需要触及到其他方法。在这里解耦的方式我们选择不在方法里直接输出，而是直接将购物车中的EntryList返回给前端，让前端去对其进行输出</li>
+</ul>
+<h4 id="3为什么要itementry类">3.为什么要ItemEntry类？</h4>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190921001939688-1747747316.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/201909/1642595-20190921001951417-2041114990.png" alt="" loading="lazy"></p>
+<ul>
+<li>购物车中的商品，应该包括商品的名称，单价，以及选中的数量（添加至购物车中的件数），选中数量的总价。而原本的商品Commidity类存的是一个商品的基本信息（名称，单价，评分等），因为逻辑上对于一个商品来说，商品并不存在“被选中多少个，一共多少钱”的属性，所以设计了商品条目ItemEntry类，里面除了存放该商品的基本属性外，还放了商品数量、该条目商品总价</li>
+</ul>
+
+                </div>
+            </article>
+        </div>
+
+        
+
+        
+		
+		
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">汪汪汪汪汪</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://damao33.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
