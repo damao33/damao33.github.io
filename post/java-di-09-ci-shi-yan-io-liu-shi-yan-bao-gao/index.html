@@ -1,0 +1,589 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java第09次实验(IO流) - 实验报告 | damao_33</title>
+<link rel="shortcut icon" href="https://damao33.github.io/favicon.ico?v=1589175659778">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://damao33.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            damao_33
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Java第09次实验(IO流) - 实验报告
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-05-11 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="0-字节流与二进制文件">0. 字节流与二进制文件</h1>
+<h3 id="我的代码">我的代码</h3>
+<pre><code>
+public class Main {
+    public static void main(String[] args)
+    {
+        String fileName=&quot;d:\\testStream\\0\\student.data&quot;;
+        try(DataOutputStream dos=new DataOutputStream(new FileOutputStream(fileName)))
+        {
+        	Student stu1=new Student(1,&quot;zhang&quot;,13,80);
+        	dos.writeInt(stu1.getId());
+        	dos.writeUTF(stu1.getName());
+        	dos.writeInt(stu1.getAge());
+        	dos.writeDouble(stu1.getGrade());
+        } catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try(DataInputStream dis=new DataInputStream(new FileInputStream(fileName)))
+        {
+        	int id=dis.readInt();
+        	String name=dis.readUTF();
+        	int age=dis.readInt();
+        	double grade=dis.readDouble();
+        	Student stu=new Student(id,name,age,grade);
+        	System.out.println(stu);
+        } catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+}
+</code></pre>
+<h3 id="我的总结">我的总结</h3>
+<p>一、 使用DataOutputStream与FileOutputStream将Student对象写入二进制文件student.data</p>
+<ol>
+<li>二进制文件与文本文件的区别</li>
+</ol>
+<ul>
+<li>二进制文件可以存储int/double/char..等基本数据类型，文本文件只能存储char型变量。因此文本文件在读取或存储过程中常需要用到类型转换（类似parseInt）</li>
+</ul>
+<p>2.try...catch...finally注意事项</p>
+<ul>
+<li>catch多个异常时要注意异常写的先后顺序，总体来说越大的（父类）异常要放越后面。可以直接使用eclipse的提示功能直接自己生成异常，方便又不会出错。</li>
+</ul>
+<p>3.使用try..with...resouces关闭资源</p>
+<ul>
+<li>是jdk8新的语法，可以直接在try(........)的括号中定义最后要关闭的资源，在运行结束后会自动关闭，不需要传统地在finally中关闭资源。用法详见上面代码块。</li>
+</ul>
+<hr>
+<h1 id="1-字符流与文本文件">1. 字符流与文本文件</h1>
+<h3 id="我的代码-2">我的代码</h3>
+<p>任务1</p>
+<pre><code>String fileName=&quot;d:\\testStream\\1\\Students.txt&quot;;
+List&lt;Student&gt; studentList = new ArrayList&lt;&gt;();
+		try(
+			FileInputStream fis=new FileInputStream(fileName);
+			InputStreamReader isr=new InputStreamReader(fis, &quot;UTF-8&quot;);
+			BufferedReader br=new BufferedReader(isr))
+		{
+			String line=null;
+			while((line=br.readLine())!=null)
+			{
+				String[] msg=line.split(&quot;\\s+&quot;);
+				int id=Integer.parseInt(msg[0]);
+				String name=msg[1];
+				int age=Integer.parseInt(msg[2]);
+				double grade=Double.parseDouble(msg[3]);
+				Student stu=new Student(id,name,age,grade);
+				studentList.add(stu);
+			}
+		} 
+		catch (FileNotFoundException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(studentList);
+</code></pre>
+<hr>
+<p>任务2</p>
+<pre><code>public static List&lt;Student&gt; readStudents(String fileName)
+	{
+		List&lt;Student&gt; studentList = new ArrayList&lt;&gt;();
+		try(
+			FileInputStream fis=new FileInputStream(fileName);
+			InputStreamReader isr=new InputStreamReader(fis, &quot;UTF-8&quot;);
+			BufferedReader br=new BufferedReader(isr))
+		{
+			String line=null;
+			while((line=br.readLine())!=null)
+			{
+				String[] msg=line.split(&quot;\\s+&quot;);
+				int id=Integer.parseInt(msg[0]);
+				String name=msg[1];
+				int age=Integer.parseInt(msg[2]);
+				double grade=Double.parseDouble(msg[3]);
+				Student stu=new Student(id,name,age,grade);
+				studentList.add(stu);
+			}
+		} 
+		catch (FileNotFoundException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return studentList;
+	}
+
+</code></pre>
+<p>任务3</p>
+<pre><code>String fileName=&quot;d:\\testStream\\1\\Students.txt&quot;;
+try(
+			FileOutputStream fos=new FileOutputStream(fileName,true);
+			OutputStreamWriter osw=new OutputStreamWriter(fos,&quot;UTF-8&quot;);
+			PrintWriter pw=new PrintWriter(osw))
+		{
+			pw.println();
+			pw.print(&quot;4 一一 13 80&quot;);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+</code></pre>
+<p>任务4</p>
+<pre><code>String fileName1=&quot;d:\\testStream\\1\\Students.dat&quot;;
+try(
+			FileOutputStream fos=new FileOutputStream(fileName1);
+			ObjectOutputStream oos=new ObjectOutputStream(fos))
+		{
+			Student ts=new Student(5,&quot;asd&quot;,14,60);
+			oos.writeObject(ts);
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try(
+			FileInputStream fis=new FileInputStream(fileName1);
+			ObjectInputStream ois=new ObjectInputStream(fis))
+		{
+			Student newStudent =(Student)ois.readObject();
+			System.out.println(newStudent);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+</code></pre>
+<h3 id="我的总结-2">我的总结</h3>
+<ul>
+<li>在任务1、2、3中，程序生成的txt文件是指定的UTF-8编码。后续如果人为地通过系统自带的文本文档打开Students.txt并进行保存，该文本会变成UTF-8-BOM编码。这样程序再次运行时就会报错，因为指定的UTF-8跟文件实际上的UTF-8-BOM是不一样的，这个问题困扰了我一段时间，目前我的解决方法是两个：不人为保存，或者需要人为保存时用notepad++。</li>
+<li>任务3中一开始PrintWriter会直接覆盖原文件，通过查阅资料，在构造FileOutputStream时多传一个true就可以了。</li>
+<li>任务4中，一开始是让对象流写在txt中，后面发现会发生乱码。通过查阅资料知道writeObject()的作用是让实例以文件的形式保存在磁盘上，而这个文件是用二进制的形式写的，所以就让对象流的处理文件是bat格式，就没错了。</li>
+</ul>
+<h1 id="2缓冲流">2.缓冲流</h1>
+<h3 id="我的代码-3">我的代码</h3>
+<pre><code>
+public class Main2 {
+	public static void main(String[] args) {
+		String fileName=&quot;d:\\testStream\\2\\test.txt&quot;;
+		try (PrintWriter pw = new PrintWriter(fileName);)
+		{
+			Random random=new Random();
+			random.setSeed(100);
+			double sum=0,aver;
+		    for (int i = 0; i &lt; 1000_0000; i++) {
+		    	int r=random.nextInt(10);
+		    	sum+=r;
+		        pw.println(r);
+		    }
+		    aver=sum/1000_0000;
+		    System.out.format(&quot;%.5f&quot;, aver);
+		    
+		} catch (FileNotFoundException e) {
+		    e.printStackTrace();
+		}
+	}
+}
+</code></pre>
+<p>JUNIT测试部分</p>
+<pre><code>
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.*;
+import java.util.*;
+import org.junit.jupiter.api.Test;
+
+class testBufferedReader {
+	String fileName=&quot;d:\\testStream\\2\\test.txt&quot;;
+	@Test
+	void testScanner() {
+		try (	FileInputStream fis = new FileInputStream(fileName);
+				Scanner sc=new Scanner(fis))
+		{
+			while(sc.hasNextInt())
+			{
+				sc.nextInt();
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}finally
+		{
+			System.out.println(&quot;sc end&quot;);
+		}
+	}
+	@Test
+	void testBufferedReader() {
+		try (	FileReader fr = new FileReader(fileName);
+				BufferedReader br=new BufferedReader(fr))
+		{
+			String line=null;
+			while((line=br.readLine())!=null)
+			{
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}finally
+		{
+			System.out.println(&quot;br end&quot;);
+		}
+	}
+}
+
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/201911/1642595-20191124220608490-910872050.png" alt="" loading="lazy"></figure>
+<h3 id="我的总结-3">我的总结</h3>
+<ul>
+<li>生成随机数平时用的少，每次需要用时都得先找点资料，要尽量记住常见的用法。</li>
+<li>在将随机数写入文件时，如果用的是print而不是println，文本大小会是println的三分一（1000_0000字节和3000_0000字节），因为一个回车2字节，没有写回车的话junit跑出来的结果Scanner和BufferedReader的时间是差不多的，而写了回车时间差距就很大。</li>
+<li>JUNIT中要测试的方法前要加上@Test</li>
+</ul>
+<hr>
+<h1 id="3字节流之对象流">3.字节流之对象流</h1>
+<h3 id="我的代码-4">我的代码</h3>
+<pre><code>public static void writeStudent(List&lt;Student&gt; stuList)
+	{
+		String fileName=&quot;d:\\testStream\\3\\Students.dat&quot;;
+		try (	FileOutputStream fos=new FileOutputStream(fileName);
+				ObjectOutputStream ois=new ObjectOutputStream(fos))
+		{
+			ois.writeObject(stuList);
+			
+		} 
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+public static List&lt;Student&gt; readStudents(String fileName)
+	{
+		List&lt;Student&gt; stuList=new ArrayList&lt;&gt;();
+		try (	FileInputStream fis=new FileInputStream(fileName);
+				ObjectInputStream ois=new ObjectInputStream(fis))
+		{
+			stuList=(List&lt;Student&gt;)ois.readObject();
+		} 
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return stuList;
+	}	
+</code></pre>
+<h3 id="我的总结-4">我的总结</h3>
+<ul>
+<li>使用对象流时，写入的是一个对象，而不是多个对象。在这里不用像用BufferedReader时一行一个Student对象地读取，而是直接读出一个集合或数组</li>
+</ul>
+<hr>
+<h1 id="5文件操作">5.文件操作</h1>
+<h3 id="我的代码-5">我的代码</h3>
+<p>递归</p>
+<pre><code>
+public class Main5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Path dir=Paths.get(&quot;D:\\&quot;, &quot;testStream&quot;,&quot;5&quot;);
+		findFile(dir,&quot;c.txt&quot;);
+	}
+	public static void findFile(Path dir,String fileName)
+	{
+		File file=dir.toFile();
+		File[] files=file.listFiles();
+		for(File now:files)
+		{
+			if(now.isFile())
+			{
+				if(now.getName().equals(fileName))
+				{
+					System.out.println(now.getAbsolutePath());
+					return;
+				}
+			}
+			else if(now.isDirectory())
+			{
+				findFile(now.toPath(),fileName);
+			}
+		}
+	}
+}
+
+</code></pre>
+<p>队列</p>
+<pre><code>
+</code></pre>
+<h3 id="我的总结-5">我的总结</h3>
+<ul>
+<li>File类和Path类可以互相转换，Path是File的升级。</li>
+<li>Paths类可以直接获得Path对象，不需要new Path。</li>
+</ul>
+<hr>
+<h1 id="6正则表达式">6.正则表达式</h1>
+<h3 id="我的代码-6">我的代码</h3>
+<p>任务1</p>
+<pre><code>
+public class Main6 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Pattern pattern=Pattern.compile(&quot;^[+-]?[0-9]+(\\.\\d+)?&quot;);
+		Matcher matcher=null;
+		while(sc.hasNext())
+		{
+			String str=sc.next();
+			matcher=pattern.matcher(str);
+			System.out.println(matcher.matches());
+		}
+		sc.close();
+	}
+}
+
+</code></pre>
+<p>任务2-匹配数字字符串</p>
+<pre><code>package javalearning;
+
+import java.io.*;
+import java.net.*;
+import java.util.regex.*;
+
+/**
+ * This program displays all URLs in a web page by matching a regular expression that describes the
+ * &lt;a href=...&gt; HTML tag. Start the program as &lt;br&gt;
+ * java HrefMatch URL
+ * @version 1.01 2004-06-04
+ * @author Cay Horstmann
+ */
+public class HrefMatch
+{
+   public static void main(String[] args)
+   {
+      try
+      {
+         // get URL string from command line or use default
+        /* String urlString;
+         if (args.length &gt; 0) urlString = args[0];
+         else urlString = &quot;http://java.sun.com&quot;;*/
+    	 String fileName=&quot;D:\\testStream\\6\\集美大学-计算机工程学院.htm&quot;;
+         // open reader for URL
+        //InputStreamReader in = new InputStreamReader(new URL(urlString).openStream());
+    	 InputStreamReader in = new InputStreamReader(new FileInputStream(fileName));
+         // read contents into string builder
+         StringBuilder input = new StringBuilder();
+         int ch;
+         while ((ch = in.read()) != -1)
+            input.append((char) ch);
+
+         String patternString = &quot;[+-]?[0-9]+(\\.\\d+)?&quot;;
+         Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+         Matcher matcher = pattern.matcher(input);
+
+         while (matcher.find())
+         {
+            int start = matcher.start();
+            int end = matcher.end();
+            String match = input.substring(start, end);
+            System.out.println(match);
+         }
+      }
+      catch (IOException e)
+      {
+         e.printStackTrace();
+      }
+      catch (PatternSyntaxException e)
+      {
+         e.printStackTrace();
+      }
+   }
+}
+
+</code></pre>
+<p>任务2-匹配图片字符串(仅展示部分，其余同数字字符串匹配)</p>
+<pre><code>         String patternImgString = &quot;img\\s[a-zA-Z]+=\&quot;.*.(gif|png|jpg|jpeg)\&quot;&quot;;
+         Pattern pattern = Pattern.compile(patternImgString, Pattern.CASE_INSENSITIVE);
+         Matcher matcher = pattern.matcher(input);
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://img2018.cnblogs.com/blog/1642595/201911/1642595-20191125124157568-132512633.png" alt="" loading="lazy"></figure>
+<h3 id="我的总结-6">我的总结</h3>
+<ul>
+<li>要熟练匹配字符串平时就要多写正则表达式，匹配图片字符串的patternImgString写了一段时间，最后还是没有做到完美的匹配（特殊情况会匹配不准确）</li>
+</ul>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://damao33.github.io/post/ru-he-shi-yong-gridea-guan-li-ge-ren-bo-ke/" class="post-title gt-a-link">
+                    如何使用Gridea管理个人博客--简易版
+                </a>
+            </div>
+        
+
+        
+		
+		
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">汪汪汪汪汪</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://damao33.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
