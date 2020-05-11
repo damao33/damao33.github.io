@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://damao33.github.io</id>
     <title>damao_33</title>
-    <updated>2020-05-11T05:41:03.501Z</updated>
+    <updated>2020-05-11T05:44:59.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://damao33.github.io"/>
     <link rel="self" href="https://damao33.github.io/atom.xml"/>
@@ -11,11 +11,163 @@
     <icon>https://damao33.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, damao_33</rights>
     <entry>
+        <title type="html"><![CDATA[如何使用Gridea管理个人博客--简易版]]></title>
+        <id>https://damao33.github.io/post/ru-he-shi-yong-gridea-guan-li-ge-ren-bo-ke/</id>
+        <link href="https://damao33.github.io/post/ru-he-shi-yong-gridea-guan-li-ge-ren-bo-ke/">
+        </link>
+        <updated>2020-05-11T04:17:50.000Z</updated>
+        <content type="html"><![CDATA[<p>在公众号topbook被安利了Gridea这个写博客的软件后，想起自己又好久没有写博客，于是顺便趁着上手Gridea的机会，好好整顿一下博客</p>
+<h2 id="建立github仓库">建立github仓库</h2>
+<p>首先到github上创建一个新的仓库，仓库名为 「用户名.github.io」，后续就可以用这个仓库名作为<strong>博客访问域名</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133416265-1974237194.png" alt="" loading="lazy"></figure>
+<p>创建仓库后点击仓库的settings，拉到页面最下端检查自己是否开启了github pages</p>
+<p><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133537524-1830869770.png" alt="" loading="lazy"><br>
+<img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133600001-1804370455.png" alt="" loading="lazy"></p>
+<p>到这里，就成功建立了内容为空的博客页面，访问域名是你的仓库名</p>
+<h2 id="建立github-token">建立github token</h2>
+<p>点击右上角头像的settings，选择菜单最下面的developer settings</p>
+<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133620432-1166258344.png" alt="" loading="lazy"></figure>
+<p>选择personal access tokens，并生成一个新的token</p>
+<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133634799-1325132850.png" alt="" loading="lazy"></figure>
+<p>新建token时填完名称后把repo勾选起来，然后到页面最下面点击生成</p>
+<figure data-type="image" tabindex="4"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133642980-772495378.png" alt="" loading="lazy"></figure>
+<p>生成成功后，这个页面一定不能关闭，根据提示，你的这个令牌关掉页面后你再也找不到了</p>
+<figure data-type="image" tabindex="5"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133651950-1371172610.png" alt="" loading="lazy"></figure>
+<h2 id="配置gridea">配置Gridea</h2>
+<p>在远程选项里，把能填的信息都填上去，令牌就是你上面生成token获得的个人令牌</p>
+<figure data-type="image" tabindex="6"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133659290-333083240.png" alt="" loading="lazy"></figure>
+<p>保存后，点击左下角的同步，再通过域名打开你的博客，或者直接点击左下角小地球，就能看到你通过Gridea部署的博客啦</p>
+<figure data-type="image" tabindex="7"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133705466-1843821433.png" alt="" loading="lazy"></figure>
+<h2 id="使用gridea">使用Gridea</h2>
+<p>关于Gridea的使用还是比较“傻瓜式”的，你可以在清晰简洁的界面里放上你想放的东西，然后点击同步，就可以在博客中看到啦。</p>
+<p>Gridea有开放的主题配置环境，你可以在主题商城中选择用户开发或者开发者开发的主题</p>
+<p>值得一提的是，Gridea 是一个静态博客写作客户端，所以每次写完内容不要忘记点击同步。</p>
+<h2 id="官网">官网</h2>
+<p><a href="https://gridea.dev/">https://gridea.dev/</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JAVA面向对象编程课程设计——多人扫雷对战]]></title>
+        <id>https://damao33.github.io/post/java_mine_sweeper/</id>
+        <link href="https://damao33.github.io/post/java_mine_sweeper/">
+        </link>
+        <updated>2020-01-09T16:02:06.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
+<p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
+<h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
+<ul>
+<li>负责服务器和客户端信息传输</li>
+<li>用DAO模式对MySQL进行操作</li>
+<li>在客户端将信息在各个界面间传输</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
+<p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
+<h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
+<ul>
+<li>负责服务器和客户端信息传输</li>
+<li>用DAO模式对MySQL进行操作</li>
+<li>在客户端将信息在各个界面间传输</li>
+</ul>
+<h2 id="-more-"><!-- more --></h2>
+<h1 id="三自己的代码提交记录截图">三.自己的代码提交记录截图</h1>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002959991-237554488.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003015038-1477407246.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003016203-1706076234.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002918055-7983445.png" alt="" loading="lazy"></figure>
+<hr>
+<h1 id="四自己负责模块或任务详细说明">四.自己负责模块或任务详细说明</h1>
+<ul>
+<li>客户端登陆、注册、设置信息时和服务器的数据交互：</li>
+</ul>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003122458-173207921.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003134328-287150250.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003154568-1652655139.png" alt="" loading="lazy"></p>
+<p>通过DAO模式将在界面获得的信息与服务器数据库上的信息进行交互，以实现用户登陆、注册、编辑信息的功能。</p>
+<ul>
+<li>获取游戏操作信息，将玩家的游戏操作传到游戏界面以便于GUI显示：</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003315061-905209868.png" alt="" loading="lazy"></figure>
+<p>客户端将点击在哪个方块的信息发送到服务器，服务器将该消息发给所有连接的用户，所有用户收到该消息后在游戏界面对应位置显示出该玩家目前游戏进度。</p>
+<ul>
+<li>客户端接收到消息时将消息传到相应界面以便于GUI的实时显示：</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003331635-1150829104.png" alt="" loading="lazy"></figure>
+<p>用户每次操作（登陆、进入游戏房间、进行游戏操作、退出等）都会通过服务器发送给所有已连接用户，用户客户端通过判断该操作信息的类型，将该信息传递给对应的GUI面板以便实时显示信息。</p>
+<hr>
+<p>##主要代码</p>
+<ul>
+<li>服务器接收并转发信息</li>
+</ul>
+<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000802575-1919729382.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000848061-266985498.png" alt="" loading="lazy"><br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001641969-1208466272.png" alt="" loading="lazy"></p>
+<p>服务器端用ServerSocket监听端口，当有用户通过Socket连接时启动一个新的线程来处理该用户发送过来的消息。</p>
+<p>**服务器如何获</p>
+<!-- more -->
+<!-- more -->
+<p>得所有已连接用户？**</p>
+<p>服务器有一个HashSet型静态属性来存放每个连接进来的线程，而线程有getUser()，通过遍历这个Set就能实现把消息发给所有用户的方法（sendToAll）。</p>
+<ul>
+<li>客户端接收并向界面传送信息</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000948763-224901141.png" alt="" loading="lazy"></figure>
+<ul>
+<li>数据库DAO模式实现类</li>
+</ul>
+<figure data-type="image" tabindex="5"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001305648-270026570.png" alt="" loading="lazy"></figure>
+<p>这里的方法都是对数据库的基本操作，登陆、注册、退出方法无非是加了点判断条件，故不展示。</p>
+<ul>
+<li>客户端连接到服务器</li>
+</ul>
+<figure data-type="image" tabindex="6"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001349260-1475308261.png" alt="" loading="lazy"></figure>
+<p>参考郑老师提供的JDBCUtil写的客户端连接服务器数据库、用Socket与服务端建立连接，都是基本语句，故不展示。</p>
+<p><strong>与服务器进行连接要注意？</strong></p>
+<ol>
+<li>与MySql连接，要注意MySQLjar包的版本，并根据jar包版本来写URL，如果URL与版本不符合可以根据异常信息去百度处理方法。</li>
+<li>用Socket与服务器连接，要注意我们校园网的ip都是内网，所以用某个同学的电脑开着做服务器是不现实的（如果会内网穿透可能可以实现），所以我们在腾讯云上租了一个月的学生服务器，服务器有外网ip，连接起来更简单。【配置服务器环境时需要注意检查安全组是否打开对应端口】</li>
+</ol>
+<ul>
+<li>多个元素封装成一条信息的办法：</li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001558900-1648033274.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001523803-530708351.png" alt="" loading="lazy"></figure>
+<p>信息Msg都是用Object类型，在考虑如何将多个信息元素一起发送时，一下子就想到“万物皆Object”这句话，利用Object数组也是一个Object可以将多个元素封装成一条信息，这是本次编程过程中让自己惊喜的一个点。</p>
+<hr>
+<h1 id="五课程设计感想">五.课程设计感想</h1>
+<ul>
+<li>关于对象流的使用</li>
+</ul>
+<p>对象流的使用是本次课设困扰我接近24小时的问题。过程中百度了无数办法，碰上了一个又一个异常，最后在郑老师帮助下解决，以下是一点心得，理解可能不到位，希望有人指出。</p>
+<ol>
+<li>对象流传输的类要序列化（implements Serializable），而且这个类服务器和客户端之间要传输，所以两边的这个类要是一模一样的，否则反序列化时会抛异常，这个最好解决。</li>
+<li>在建立对象流时，要谨慎。比如说服务器要先建立输出流再建立输入流，客户端就要先建立输入流再建立输出流。在建立对象流时，不要在最前面建了一个对象流，后面用这个对象流处理传进来的每个对象，这样对象流在第一次反序列化时没有毛病，但是在遇到第二个传进来的对象时，序列化就会出现异常。所以我的解决办法是当要用的时候再去建立一个对象流。</li>
+<li>服务器在使用对象流时，要用while循环把ServerSocket的accept包括起来。见博客：https://blog.csdn.net/do_script/article/details/50059049</li>
+</ol>
+<ul>
+<li>关于服务器与客户端数据交互</li>
+</ul>
+<p>既然可以将多个元素封装成一条信息，也就可以从一条信息读取出多个元素，当然要记得使用instanceof来判断信息类型。服务器与客户端之间收发信息其实不难，而且方法类似，难的是一方在收到信息后要对这条信息做怎样的处理，才能让它传到你想传的地方。</p>
+<ul>
+<li>关于整个游戏的设计思路</li>
+</ul>
+<ol>
+<li>这次扫雷的最终成果是客户端可以进行扫雷，但是不能看到其他玩家的游戏画面，只能看到他们展开了多少方格，这样多少有点弱化了“对战”，但是时间有限，没有成功将其他人的画面显示出来。<br>
+2.原本的思路其实是在其他玩家的面板也放上一个小的扫雷面板，然后在客户端点击一个方格后把这个操作信息发给所有用户，其他用户把收到的这个操作信息作用在该信息对应的扫雷面板上，这样就能让客户端看到其他玩家的操作画面。但是由于我们没能把扫雷面板放在对应的玩家面板上，所以这个想法可以说还没开始就失败了。</li>
+</ol>
+<p>理想效果（P图实现）：<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014117406-81142455.png" alt="" loading="lazy"></p>
+<p>实际效果：<br>
+<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014000700-1057066298.png" alt="" loading="lazy"></p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Java第09次实验(IO流) - 实验报告]]></title>
         <id>https://damao33.github.io/post/java-di-09-ci-shi-yan-io-liu-shi-yan-bao-gao/</id>
         <link href="https://damao33.github.io/post/java-di-09-ci-shi-yan-io-liu-shi-yan-bao-gao/">
         </link>
-        <updated>2020-05-11T05:39:39.000Z</updated>
+        <updated>2019-11-24T14:06:39.000Z</updated>
         <content type="html"><![CDATA[<h1 id="0-字节流与二进制文件">0. 字节流与二进制文件</h1>
 <h3 id="我的代码">我的代码</h3>
 <pre><code>
@@ -455,158 +607,6 @@ public class HrefMatch
 <ul>
 <li>要熟练匹配字符串平时就要多写正则表达式，匹配图片字符串的patternImgString写了一段时间，最后还是没有做到完美的匹配（特殊情况会匹配不准确）</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何使用Gridea管理个人博客--简易版]]></title>
-        <id>https://damao33.github.io/post/ru-he-shi-yong-gridea-guan-li-ge-ren-bo-ke/</id>
-        <link href="https://damao33.github.io/post/ru-he-shi-yong-gridea-guan-li-ge-ren-bo-ke/">
-        </link>
-        <updated>2020-05-11T04:17:50.000Z</updated>
-        <content type="html"><![CDATA[<p>在公众号topbook被安利了Gridea这个写博客的软件后，想起自己又好久没有写博客，于是顺便趁着上手Gridea的机会，好好整顿一下博客</p>
-<h2 id="建立github仓库">建立github仓库</h2>
-<p>首先到github上创建一个新的仓库，仓库名为 「用户名.github.io」，后续就可以用这个仓库名作为<strong>博客访问域名</strong></p>
-<figure data-type="image" tabindex="1"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133416265-1974237194.png" alt="" loading="lazy"></figure>
-<p>创建仓库后点击仓库的settings，拉到页面最下端检查自己是否开启了github pages</p>
-<p><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133537524-1830869770.png" alt="" loading="lazy"><br>
-<img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133600001-1804370455.png" alt="" loading="lazy"></p>
-<p>到这里，就成功建立了内容为空的博客页面，访问域名是你的仓库名</p>
-<h2 id="建立github-token">建立github token</h2>
-<p>点击右上角头像的settings，选择菜单最下面的developer settings</p>
-<figure data-type="image" tabindex="2"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133620432-1166258344.png" alt="" loading="lazy"></figure>
-<p>选择personal access tokens，并生成一个新的token</p>
-<figure data-type="image" tabindex="3"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133634799-1325132850.png" alt="" loading="lazy"></figure>
-<p>新建token时填完名称后把repo勾选起来，然后到页面最下面点击生成</p>
-<figure data-type="image" tabindex="4"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133642980-772495378.png" alt="" loading="lazy"></figure>
-<p>生成成功后，这个页面一定不能关闭，根据提示，你的这个令牌关掉页面后你再也找不到了</p>
-<figure data-type="image" tabindex="5"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133651950-1371172610.png" alt="" loading="lazy"></figure>
-<h2 id="配置gridea">配置Gridea</h2>
-<p>在远程选项里，把能填的信息都填上去，令牌就是你上面生成token获得的个人令牌</p>
-<figure data-type="image" tabindex="6"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133659290-333083240.png" alt="" loading="lazy"></figure>
-<p>保存后，点击左下角的同步，再通过域名打开你的博客，或者直接点击左下角小地球，就能看到你通过Gridea部署的博客啦</p>
-<figure data-type="image" tabindex="7"><img src="https://img2020.cnblogs.com/blog/1642595/202005/1642595-20200511133705466-1843821433.png" alt="" loading="lazy"></figure>
-<h2 id="使用gridea">使用Gridea</h2>
-<p>关于Gridea的使用还是比较“傻瓜式”的，你可以在清晰简洁的界面里放上你想放的东西，然后点击同步，就可以在博客中看到啦。</p>
-<p>Gridea有开放的主题配置环境，你可以在主题商城中选择用户开发或者开发者开发的主题</p>
-<p>值得一提的是，Gridea 是一个静态博客写作客户端，所以每次写完内容不要忘记点击同步。</p>
-<h2 id="官网">官网</h2>
-<p><a href="https://gridea.dev/">https://gridea.dev/</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JAVA面向对象编程课程设计——多人扫雷对战]]></title>
-        <id>https://damao33.github.io/post/java_mine_sweeper/</id>
-        <link href="https://damao33.github.io/post/java_mine_sweeper/">
-        </link>
-        <updated>2020-05-11T02:29:06.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
-<p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
-<h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
-<ul>
-<li>负责服务器和客户端信息传输</li>
-<li>用DAO模式对MySQL进行操作</li>
-<li>在客户端将信息在各个界面间传输</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="一团队课程设计博客链接">一.团队课程设计博客链接</h1>
-<p><a href="https://www.cnblogs.com/ye12892/p/12174140.html">JAVA面向对象编程课程设计——多人扫雷对战</a></p>
-<h1 id="二个人负责模块和任务说明">二.个人负责模块和任务说明</h1>
-<ul>
-<li>负责服务器和客户端信息传输</li>
-<li>用DAO模式对MySQL进行操作</li>
-<li>在客户端将信息在各个界面间传输</li>
-</ul>
-<h2 id="-more-"><!-- more --></h2>
-<h1 id="三自己的代码提交记录截图">三.自己的代码提交记录截图</h1>
-<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002959991-237554488.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003015038-1477407246.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003016203-1706076234.png" alt="" loading="lazy"></p>
-<figure data-type="image" tabindex="1"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110002918055-7983445.png" alt="" loading="lazy"></figure>
-<hr>
-<h1 id="四自己负责模块或任务详细说明">四.自己负责模块或任务详细说明</h1>
-<ul>
-<li>客户端登陆、注册、设置信息时和服务器的数据交互：</li>
-</ul>
-<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003122458-173207921.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003134328-287150250.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003154568-1652655139.png" alt="" loading="lazy"></p>
-<p>通过DAO模式将在界面获得的信息与服务器数据库上的信息进行交互，以实现用户登陆、注册、编辑信息的功能。</p>
-<ul>
-<li>获取游戏操作信息，将玩家的游戏操作传到游戏界面以便于GUI显示：</li>
-</ul>
-<figure data-type="image" tabindex="2"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003315061-905209868.png" alt="" loading="lazy"></figure>
-<p>客户端将点击在哪个方块的信息发送到服务器，服务器将该消息发给所有连接的用户，所有用户收到该消息后在游戏界面对应位置显示出该玩家目前游戏进度。</p>
-<ul>
-<li>客户端接收到消息时将消息传到相应界面以便于GUI的实时显示：</li>
-</ul>
-<figure data-type="image" tabindex="3"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110003331635-1150829104.png" alt="" loading="lazy"></figure>
-<p>用户每次操作（登陆、进入游戏房间、进行游戏操作、退出等）都会通过服务器发送给所有已连接用户，用户客户端通过判断该操作信息的类型，将该信息传递给对应的GUI面板以便实时显示信息。</p>
-<hr>
-<p>##主要代码</p>
-<ul>
-<li>服务器接收并转发信息</li>
-</ul>
-<p><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000802575-1919729382.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000848061-266985498.png" alt="" loading="lazy"><br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001641969-1208466272.png" alt="" loading="lazy"></p>
-<p>服务器端用ServerSocket监听端口，当有用户通过Socket连接时启动一个新的线程来处理该用户发送过来的消息。</p>
-<p>**服务器如何获</p>
-<!-- more -->
-<!-- more -->
-<p>得所有已连接用户？**</p>
-<p>服务器有一个HashSet型静态属性来存放每个连接进来的线程，而线程有getUser()，通过遍历这个Set就能实现把消息发给所有用户的方法（sendToAll）。</p>
-<ul>
-<li>客户端接收并向界面传送信息</li>
-</ul>
-<figure data-type="image" tabindex="4"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110000948763-224901141.png" alt="" loading="lazy"></figure>
-<ul>
-<li>数据库DAO模式实现类</li>
-</ul>
-<figure data-type="image" tabindex="5"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001305648-270026570.png" alt="" loading="lazy"></figure>
-<p>这里的方法都是对数据库的基本操作，登陆、注册、退出方法无非是加了点判断条件，故不展示。</p>
-<ul>
-<li>客户端连接到服务器</li>
-</ul>
-<figure data-type="image" tabindex="6"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001349260-1475308261.png" alt="" loading="lazy"></figure>
-<p>参考郑老师提供的JDBCUtil写的客户端连接服务器数据库、用Socket与服务端建立连接，都是基本语句，故不展示。</p>
-<p><strong>与服务器进行连接要注意？</strong></p>
-<ol>
-<li>与MySql连接，要注意MySQLjar包的版本，并根据jar包版本来写URL，如果URL与版本不符合可以根据异常信息去百度处理方法。</li>
-<li>用Socket与服务器连接，要注意我们校园网的ip都是内网，所以用某个同学的电脑开着做服务器是不现实的（如果会内网穿透可能可以实现），所以我们在腾讯云上租了一个月的学生服务器，服务器有外网ip，连接起来更简单。【配置服务器环境时需要注意检查安全组是否打开对应端口】</li>
-</ol>
-<ul>
-<li>多个元素封装成一条信息的办法：</li>
-</ul>
-<figure data-type="image" tabindex="7"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001558900-1648033274.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="8"><img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110001523803-530708351.png" alt="" loading="lazy"></figure>
-<p>信息Msg都是用Object类型，在考虑如何将多个信息元素一起发送时，一下子就想到“万物皆Object”这句话，利用Object数组也是一个Object可以将多个元素封装成一条信息，这是本次编程过程中让自己惊喜的一个点。</p>
-<hr>
-<h1 id="五课程设计感想">五.课程设计感想</h1>
-<ul>
-<li>关于对象流的使用</li>
-</ul>
-<p>对象流的使用是本次课设困扰我接近24小时的问题。过程中百度了无数办法，碰上了一个又一个异常，最后在郑老师帮助下解决，以下是一点心得，理解可能不到位，希望有人指出。</p>
-<ol>
-<li>对象流传输的类要序列化（implements Serializable），而且这个类服务器和客户端之间要传输，所以两边的这个类要是一模一样的，否则反序列化时会抛异常，这个最好解决。</li>
-<li>在建立对象流时，要谨慎。比如说服务器要先建立输出流再建立输入流，客户端就要先建立输入流再建立输出流。在建立对象流时，不要在最前面建了一个对象流，后面用这个对象流处理传进来的每个对象，这样对象流在第一次反序列化时没有毛病，但是在遇到第二个传进来的对象时，序列化就会出现异常。所以我的解决办法是当要用的时候再去建立一个对象流。</li>
-<li>服务器在使用对象流时，要用while循环把ServerSocket的accept包括起来。见博客：https://blog.csdn.net/do_script/article/details/50059049</li>
-</ol>
-<ul>
-<li>关于服务器与客户端数据交互</li>
-</ul>
-<p>既然可以将多个元素封装成一条信息，也就可以从一条信息读取出多个元素，当然要记得使用instanceof来判断信息类型。服务器与客户端之间收发信息其实不难，而且方法类似，难的是一方在收到信息后要对这条信息做怎样的处理，才能让它传到你想传的地方。</p>
-<ul>
-<li>关于整个游戏的设计思路</li>
-</ul>
-<ol>
-<li>这次扫雷的最终成果是客户端可以进行扫雷，但是不能看到其他玩家的游戏画面，只能看到他们展开了多少方格，这样多少有点弱化了“对战”，但是时间有限，没有成功将其他人的画面显示出来。<br>
-2.原本的思路其实是在其他玩家的面板也放上一个小的扫雷面板，然后在客户端点击一个方格后把这个操作信息发给所有用户，其他用户把收到的这个操作信息作用在该信息对应的扫雷面板上，这样就能让客户端看到其他玩家的操作画面。但是由于我们没能把扫雷面板放在对应的玩家面板上，所以这个想法可以说还没开始就失败了。</li>
-</ol>
-<p>理想效果（P图实现）：<br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014117406-81142455.png" alt="" loading="lazy"></p>
-<p>实际效果：<br>
-<img src="https://img2018.cnblogs.com/blog/1642595/202001/1642595-20200110014000700-1057066298.png" alt="" loading="lazy"></p>
-<!-- more -->
 ]]></content>
     </entry>
     <entry>
